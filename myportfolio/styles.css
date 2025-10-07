@@ -1,0 +1,147 @@
+/* === Reset & Base === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #f0f4ff, #ffffff);
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+a {
+  color: #2f023f;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #2575fc;
+}
+
+/* === Header === */
+header {
+  background: linear-gradient(to right, #330287, #b661e7);
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+}
+nav a {
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* === Main Layout === */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* === Sections === */
+section {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 1s ease forwards;
+}
+.delay-1 { animation-delay: 0.3s; }
+.delay-2 { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  color: #444;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #6a11cb;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* === About Me === */
+.about-content p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* === Projects === */
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+.project {
+  background: linear-gradient(145deg, #e3ecff, #f0f4ff);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+.project h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+.project p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0;
+}
+
+/* === Contact === */
+#contact p {
+  font-size: 1.05rem;
+  margin: 10px 0;
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #6a11cb;
+  color: white;
+  font-size: 0.9rem;
+  border-top: 4px solid #25d5fc;
+}
+
+/* === Responsive === */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
